@@ -251,3 +251,18 @@ For this question do the following
 response = get_completion(prompt)
 print(response)
 ```
+
+## Iterative Prompt Development
+
+* Be clear and specific
+* Analyze why result does not give desired output.
+* Refine the idea ans the prompt
+* Repeat
+* There is not a "perfect propmt", a good prompt is a proccess.
+
+### Iterative Process
+
+* Try something
+* Analyze where the result does not give what you want
+* Clarify instructions, give more time to think
+* Refine propmts with a btach of examples
