@@ -5,6 +5,15 @@ Information about prompt engineering on ChatGPT
 
 ## [Information Taken From OpenAI Course](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
 
+## LLMS (Large Language Models)
+
+### Base LLM
+* Predicts new word, based on text training data.
+### Instruction Tuned LLM
+* Tries to follow instrucctions
+* Fine-tune on instructions and good attemps at following those instructions
+* It started as Base LLM and then is train with RLHF (ReinforcementLEarning with Human Feedback)
+* Helpful, Honest, Harmless
 ## Principle of Prompting
 
 ### Principle 1: Write clear and specific instructions
@@ -12,8 +21,7 @@ Information about prompt engineering on ChatGPT
 *  Tactic 1: Use delimiters to clearly indicate distinct parts of the input
 
 ```python
-text = f"""
-You should express what you want a model to do by \ 
+text = f"""You should express what you want a model to do by 
 providing instructions that are as clear and \ 
 specific as you can possibly make them. \ 
 This will guide the model towards the desired output, \ 
@@ -258,7 +266,7 @@ print(response)
 * Analyze why result does not give desired output.
 * Refine the idea ans the prompt
 * Repeat
-* There is not a "perfect propmt", a good prompt is a proccess.
+* There is not a "perfect prompt", a good prompt is a proccess.
 
 ### Iterative Process
 
@@ -266,3 +274,15 @@ print(response)
 * Analyze where the result does not give what you want
 * Clarify instructions, give more time to think
 * Refine propmts with a btach of examples
+
+## Summarizing
+
+* Summarize with a word/sentence/character limit:
+>Summarize the review below, delimited by triple backticks, in at most 30 words.
+* Summarize with a focus:
+>Summarize the review below, delimited by triple backticks, in at most 30 words, and focusing on any aspects that mention shipping and delivery of the product.
+* Summarize with a focus on price and value:
+> Summarize the review below, delimited by triple  backticks, in at most 30 words, and focusing on any aspects that are relevant to the price and perceived value. 
+* Try "extract" instead of "summarize":
+> Your task is to extract relevant information from \ a product review from an ecommerce site to give feedback to the Shipping department. From the review below, delimited by triple quotes, extract the information relevant to shipping and delivery. Limit to 30 words. 
+
